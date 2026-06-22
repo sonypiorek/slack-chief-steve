@@ -8,13 +8,7 @@ in a configured channel and Claude works in that channel's repo, committing stra
 
 - `@Steve <task>` in a configured channel starts a Claude Code run in that channel's repo
 - Reply in the thread with `@Steve <message>` to **resume the exact same Claude session**
-- Pulls latest (only if the remote is ahead), then commits directly to `main`, but only
-  when files actually change. No feature branches, no PRs.
-- Multiple channels can map to different repos
-- Attach image(s) to a `@Steve` message and Claude reads them, downloaded to a temp
-  dir and deleted when the run ends (needs the `files:read` scope)
-- Sessions auto-close after a configurable TTL (default 5h), pushing any changes
-- Runs forever under systemd
+- if you give it tools (like gmail or granola) it is able to perform a bunch of tasks, such as brief you into your next meeting, run research on your prospects, drafts follow ups. You can create claude skills, save them into your repo, run them auotmatially everyday, etc. 
 
 ## How session memory works (no database)
 
