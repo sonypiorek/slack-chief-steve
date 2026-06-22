@@ -1,0 +1,21 @@
+[Unit]
+Description=Claude Code Slack Bridge (Steve)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=youruser
+WorkingDirectory=/home/youruser/services/claude-code-bridge
+EnvironmentFile=/home/youruser/services/claude-code-bridge/.env
+Environment=PATH=/home/youruser/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=HOME=/home/youruser
+ExecStart=/usr/local/bin/bun /home/youruser/services/claude-code-bridge/bridge.js
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=claude-code-bridge
+
+[Install]
+WantedBy=multi-user.target
