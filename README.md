@@ -1,8 +1,7 @@
 # claude-code-bridge (Steve)
 
 A Slack bot that gives Claude Code a two-way control channel from Slack. Tag `@Steve`
-in a configured channel and Claude works in that channel's repo, committing straight to
-`main` and replying in the thread.
+in a configured channel and Claude works in that channel's repo and replying in the thread.
 
 ## What it does
 
@@ -256,3 +255,7 @@ That's it. Steve runs around the clock, and everything happens in Slack from her
 - Bun (the runtime Steve runs on)
 - Claude Code, installed and signed in
 - Git push access to every repo in `CHANNEL_REPO_MAP`
+
+## Notes
+
+- you need to feed Steve knowledge on your company. I would just dictate all the relevant context (your company description, you as a founder, ICP, your writing style, anything that an intern or employee should know to do a good job) and tell it to categorise it and store it as md files for it's use. 
